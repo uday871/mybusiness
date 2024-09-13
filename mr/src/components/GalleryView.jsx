@@ -27,6 +27,8 @@ const GalleryView = () => {
 
       
       <hr />
+
+      
       <div className="gallery-content">
         <motion.div
           className="project-info"

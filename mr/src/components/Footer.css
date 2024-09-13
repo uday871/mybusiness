@@ -7,6 +7,7 @@
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .footer-content {
@@ -15,15 +16,19 @@
   flex-wrap: wrap;
   text-align: left;
   margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .footer-left h1 {
   font-size: 36px;
   margin-bottom: 20px;
+  justify-content: center;
   background: linear-gradient(90deg, #00ff88, #00bfa6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: fadeInText 1.2s ease-in-out;
+  color: white;
 }
 
 .contact-info {

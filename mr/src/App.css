@@ -9,6 +9,11 @@ body {
   font-family: 'Poppins', sans-serif;
   width: 100%;
   background-color: rgb(2,4,10);
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 /* Navbar Styling */
@@ -27,17 +32,50 @@ body {
 
 }
 
+.logocontainer {
+  display: flex;
+  margin: 0;
+}
+
+.logoimage {
+  height: 60px;
+  width: 60px;
+}
+
 .logo {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #00ff00, #00a86b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-left: 110px;
+  background: linear-gradient(90deg, #ff5733, #33ff57, #3357ff, #f3ff33, #ff33a1);
+  background-clip: text; /* Clips background to the text */
+  -webkit-background-clip: text;
+  color: transparent; /* Makes the actual text color transparent */
+  animation: colorChange 5s linear infinite;
 }
 
 .dot-com {
   color: #00ff00;
+}
+
+@keyframes colorChange {
+  0% {
+      background-position: 0% 50%;
+  }
+  25% {
+      background-position: 100% 50%;
+  }
+  50% {
+      background-position: 0% 50%;
+  }
+  75% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .nav-links {
@@ -110,7 +148,13 @@ body {
     color: black;
   }
   .logo {
+    font-size: 20px;
     margin-left: 0;
+    letter-spacing: 3px;
+  }
+  .logoimage {
+    height: 30px;
+    width: 30px;
   }
 }
 
