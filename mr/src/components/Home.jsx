@@ -15,6 +15,7 @@ import GalleryView from './GalleryView';
 import Footer from './Footer';
 
 import { useState,useEffect } from 'react';
+import AwesomeRainbowCursor from './AwesomeRainbowCursor';
 
 
 const Home = () => {
@@ -128,6 +129,7 @@ useEffect(() => {
           <div className="graphic-container">
             <div className="graphic">
               <img src={imm} alt="Graphic" className="graphic-img" />
+              {/* <AwesomeRainbowCursor/> */}
             </div>
           </div>
           
@@ -200,6 +202,7 @@ useEffect(() => {
         Your Business with Powerful Online Services from our Website.
       </p>
     </div>
+    
   </section>
 
 

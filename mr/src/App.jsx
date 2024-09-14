@@ -15,6 +15,7 @@ import Contact from './components/Contact';
 import AwesomeRainbowCursor from './components/AwesomeRainbowCursor'; // Import the cursor component
 
 import bs from './components/images/bussinesslogo.png';
+import Talk from './components/Talk';
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ const App = () => {
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/products">Products</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
-          <li className="cta"><Link to="/contact" className="talk-btn">Let's Talk</Link></li>
+          <li className="cta"><Link to="/Talk" className="talk-btn">Let's Talk</Link></li>
         </ul>
 
         <IconButton className="menu-icon" onClick={toggleMobileMenu}>
@@ -78,8 +79,9 @@ const App = () => {
         <Route path="/Services" element={<Services />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Talk" element={<Talk />} />
       </Routes>
-      <AwesomeRainbowCursor /> 
+      {/* <AwesomeRainbowCursor />  */}
     </Router>
   );
 };
