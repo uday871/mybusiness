@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { IconButton, Drawer, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
@@ -9,15 +7,14 @@ import InfoIcon from '@mui/icons-material/Info';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import './App.css';
 
-
 import Home from './components/Home';
-import About from './components/About'
-import Services from './components/Services'
-import Products from './components/Products'
-import Contact from './components/Contact'
+import About from './components/About';
+import Services from './components/Services';
+import Products from './components/Products';
+import Contact from './components/Contact';
+import AwesomeRainbowCursor from './components/AwesomeRainbowCursor'; // Import the cursor component
 
-import bs from './components/images/bussinesslogo.png'
-
+import bs from './components/images/bussinesslogo.png';
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +30,6 @@ const App = () => {
   return (
     <Router>
       <nav className="navbar">
-
         <div className="logocontainer">
           <div className="logo">
             <img src={bs} alt="" className='logoimage'/> 
@@ -76,7 +72,6 @@ const App = () => {
         </Drawer>
       </nav>
 
-      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
@@ -84,9 +79,9 @@ const App = () => {
         <Route path="/Products" element={<Products />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
+      <AwesomeRainbowCursor /> 
     </Router>
   );
 };
-
 
 export default App;
