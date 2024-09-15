@@ -71,7 +71,7 @@ useEffect(() => {
       startCounting();
     }
   };
-// Duration of the animation in ms
+
   const startCounting = () => {
     const duration = 2000; 
     const interval = 50; 
@@ -117,7 +117,7 @@ useEffect(() => {
   return (
     <>
       <div className="maincontainer" style={{backgroundColor:''}}>
-        <div className="hero-container">
+        <div className="hero-container" style={{backgroundColor:''}}>
           <div className="text-content">
             <h1>
               <span className="best">BEST</span>
@@ -129,7 +129,7 @@ useEffect(() => {
           <div className="graphic-container">
             <div className="graphic">
               <img src={imm} alt="Graphic" className="graphic-img" />
-              {/* <AwesomeRainbowCursor/> */}
+              <AwesomeRainbowCursor/>
             </div>
           </div>
           

@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Talk.css'
 
 
+
 function Talk() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -38,10 +39,10 @@ function Talk() {
       <div className="contact-left">
         <div className="contact-form">
 
-          <div className="contact-info">
+          {/* <div className="contact-info">
             <h1 style={{fontFamily:'Twentieth Century sans-serif'}}> Help Desk</h1>
             <p style={{marginTop:'-25px',letterSpacing:'2px'}}>Email: admin@gmail.com</p>
-          </div>
+          </div> */}
 
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
@@ -80,6 +81,10 @@ function Talk() {
           </form>
         </div>
       </div>
+
+      {/* <div className="rightimage">
+        hi
+      </div> */}
     </div>
   );
 }
