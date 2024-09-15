@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import WebIcon from '@mui/icons-material/Web';
 import AppSettingsAltIcon from '@mui/icons-material/AppSettingsAlt';
 import BuildCircleIcon from '@mui/icons-material/BuildCircle';
+
 import GalleryView from './GalleryView';
 import Footer from './Footer';
 

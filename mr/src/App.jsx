@@ -44,7 +44,7 @@ const App = () => {
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/UserMessage">Services</Link></li>
+          <li><Link to="/services">Services</Link></li>
           <li><Link to="/products">Products</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
           <li className="cta"><Link to="/Talk" className="talk-btn">Let's Talk</Link></li>
@@ -53,6 +53,8 @@ const App = () => {
         <IconButton className="menu-icon" onClick={toggleMobileMenu}>
           <MenuIcon style={{color:'white'}}/>
         </IconButton>
+
+
 
         <Drawer anchor="left" open={isMobileMenuOpen} onClose={closeMobileMenu}>
           <div className="sidebar">
@@ -65,9 +67,30 @@ const App = () => {
                 <ListItemIcon><InfoIcon style={{ color: "#00ff00" }} /></ListItemIcon>
                 <ListItemText><Link to="/about">About</Link></ListItemText>
               </ListItem>
+
               <ListItem button onClick={closeMobileMenu}>
                 <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
-                <ListItemText><Link to="/contact">Contact Us</Link></ListItemText>
+                <ListItemText><Link to="/contact">Contact</Link></ListItemText>
+              </ListItem>
+
+              <ListItem button onClick={closeMobileMenu}>
+                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemText><Link to="/Products">Products</Link></ListItemText>
+              </ListItem>
+
+              <ListItem button onClick={closeMobileMenu}>
+                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemText><Link to="/Talk">Talk with me</Link></ListItemText>
+              </ListItem>
+
+              <ListItem button onClick={closeMobileMenu}>
+                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemText><Link to="/UserMessage">UserMessage</Link></ListItemText>
+              </ListItem>
+
+              <ListItem button onClick={closeMobileMenu}>
+                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemText><Link to="/Services">Services</Link></ListItemText>
               </ListItem>
             </List>
           </div>
