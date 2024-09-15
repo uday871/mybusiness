@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const mongoDbUrl = "mongodb://localhost:27017";
+const mongoDbUrl = process.env.MONGODB_URI;
 
 mongoose.connect(mongoDbUrl)
 .then(() => {
@@ -35,7 +35,7 @@ const messageSchema = new mongoose.Schema({
   message: String,
 });
 
-const Message = mongoose.model('Message', messageSchema);
+const Message = mongoose.model('userMessage', messageSchema);
 
 // API endpoint to handle form submission
 app.post('/api/messages', async (req, res) => {
