@@ -18,7 +18,7 @@ function Talk() {
     setSuccess(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/messages', { name, email, message });
+      const response = await axios.post('https://mytrend.onrender.com/api/messages', { name, email, message });
       if (response.data.success) {
         setSuccess('Message sent successfully!');
         setName('');

@@ -11,7 +11,7 @@ function UserMessage() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/messages');
+        const response = await axios.get('https://mytrend.onrender.com/api/messages');
         setMessages(response.data);
       } catch (error) {
         setError('Failed to fetch messages.');
@@ -30,7 +30,7 @@ function UserMessage() {
 
     if (currentMessage) {
       try {
-        await axios.post('http://localhost:5000/api/reply', {
+        await axios.post('https://mytrend.onrender.com/api/reply', {
           email: currentMessage.email,
           message: replyMessage,
         });
