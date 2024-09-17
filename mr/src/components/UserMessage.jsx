@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './UserMessage.css'
+import './UserMessage.css';
 
 function UserMessage() {
   const [messages, setMessages] = useState([]);
@@ -26,7 +26,7 @@ function UserMessage() {
   };
 
   const handleReplySubmit = async () => {
-    const currentMessage = messages.find((msg) => msg._id === currentMessageId); 
+    const currentMessage = messages.find((msg) => msg._id === currentMessageId);
 
     if (currentMessage) {
       try {
@@ -48,30 +48,30 @@ function UserMessage() {
       {error && <p className="error-message">{error}</p>}
       <div className="message-container">
         {messages.map((msg) => (
-          <div className="message-card" key={msg._id}>
-            <h3>{msg.name}</h3>
-            <p>{msg.email}</p>
-            <p>{msg.message}</p>
-
-            <button
-              className="reply-button"
-              onClick={() => setCurrentMessageId(msg._id)} 
-            >
-              Reply
-            </button>
-
+          <div key={msg._id}>
+            <div className="message-row">
+              <div className="msgname">{msg.name}</div>
+              <div className="msgemail">{msg.email}</div>
+              <button
+                className="reply-button"
+                onClick={() => setCurrentMessageId(msg._id)}
+              >
+                Reply
+              </button>
+            </div>
             {currentMessageId === msg._id && (
               <div className="reply-form">
-                <textarea
-                  value={replyMessage}
-                  onChange={handleReplyChange}
-                  placeholder="Write your reply here..."
-                  className='textarr'
-                />
-                <button onClick={handleReplySubmit}>
-                  Send Reply
-                </button>
-                
+                <div className="textarea-wrapper">
+                  <textarea
+                    value={replyMessage}
+                    onChange={handleReplyChange}
+                    placeholder="Write your reply here..."
+                    className='textarr'
+                  />
+                  <button onClick={handleReplySubmit} className='send-reply-btn'>
+                    Send Reply
+                  </button>
+                </div>
               </div>
             )}
           </div>

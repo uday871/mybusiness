@@ -37,7 +37,7 @@ const messageSchema = new mongoose.Schema({
 
 const Message = mongoose.model('userMessage', messageSchema);
 
-// API endpoint to handle form submission
+
 app.post('/api/messages', async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -51,7 +51,6 @@ app.post('/api/messages', async (req, res) => {
   }
 });
 
-// API endpoint to fetch messages
 app.get('/api/messages', async (req, res) => {
   try {
     const messages = await Message.find();

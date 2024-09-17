@@ -25,11 +25,6 @@ const [projects, setProjects] = useState(0);
 const [clients, setClients] = useState(0);
 const [experts, setExperts] = useState(0);
 const [isVisible, setIsVisible] = useState(false);
-
-
-
-
-
   const services = [
   {
     id:1,
@@ -130,7 +125,7 @@ useEffect(() => {
           <div className="graphic-container">
             <div className="graphic">
               <img src={imm} alt="Graphic" className="graphic-img" />
-              <AwesomeRainbowCursor/>
+              {/* <AwesomeRainbowCursor/> */}
             </div>
           </div>
           
@@ -200,7 +195,7 @@ useEffect(() => {
       <h2>Our Services</h2>
       <p>
         Comprehensive Website Services to Ignite Your Online Success. Empower
-        Your Business with Powerful Online Services from our Website.
+        Your Business with Powerful Online Services from our Web Application.
       </p>
     </div>
     

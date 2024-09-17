@@ -170,12 +170,12 @@ body {
 .sidebar a:hover {
   color: #00ff00;
 }
-
+  
 
 @media (max-width: 720px) {
   .navbar {
     height: 50px;
-    width: 96%;
+    width: 100%;
   }
   .nav-links {
     display: none; 

@@ -71,7 +71,7 @@ const GalleryView = () => {
           transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
         >
           <h2>02</h2>
-          <h3>Ecommerce</h3>
+          <h3>VideoTube</h3>
         </motion.div>
 
 
@@ -105,7 +105,7 @@ const GalleryView = () => {
           transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
         >
           <h2>03</h2>
-          <h3>Ecommerce</h3>
+          <h3>Music</h3>
         </motion.div>
 
 
