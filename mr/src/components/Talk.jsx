@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
+import talk from './images/talk.webp'
 import './Talk.css'
-
-
 
 function Talk() {
   const [name, setName] = useState('');
@@ -32,18 +30,10 @@ function Talk() {
     }
   };
 
-
-
   return (
-    <div className="contact-page" style={{justifyContent:'center',display:'flex'}}>
+    <div className="contact-page">
       <div className="contact-left">
         <div className="contact-form">
-
-          {/* <div className="contact-info">
-            <h1 style={{fontFamily:'Twentieth Century sans-serif'}}> Help Desk</h1>
-            <p style={{marginTop:'-25px',letterSpacing:'2px'}}>Email: admin@gmail.com</p>
-          </div> */}
-
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
             <input
@@ -53,6 +43,7 @@ function Talk() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              className='messagername'
             />
 
             <label htmlFor="email">Email:</label>
@@ -63,6 +54,7 @@ function Talk() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className='messagergmail'
             />
 
             <label htmlFor="message">Message:</label>
@@ -72,9 +64,10 @@ function Talk() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
+              className='messagermessage'
             ></textarea>
 
-            <button type="submit">Send</button>
+            <button type="submit" className='snedtoadmin'>Send</button>
 
             {success && <p className="success-message">{success}</p>}
             {error && <p className="error-message">{error}</p>}
@@ -82,9 +75,9 @@ function Talk() {
         </div>
       </div>
 
-      {/* <div className="rightimage">
-        hi
-      </div> */}
+      <div className="contact-right">
+        <img src={talk} alt="Contact Banner" className="banner-image" />
+      </div>
     </div>
   );
 }

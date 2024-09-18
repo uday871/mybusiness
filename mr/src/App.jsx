@@ -5,6 +5,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactsIcon from '@mui/icons-material/Contacts';
+import ChatIcon from '@mui/icons-material/Chat';
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import CategoryIcon from '@mui/icons-material/Category';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import './App.css';
 
 import Home from './components/Home';
@@ -69,29 +73,30 @@ const App = () => {
               </ListItem>
 
               <ListItem button onClick={closeMobileMenu}>
-                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemIcon><ChatIcon style={{ color: "#00ff00" }} /></ListItemIcon>
                 <ListItemText><Link to="/contact">Contact</Link></ListItemText>
               </ListItem>
 
               <ListItem button onClick={closeMobileMenu}>
-                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemIcon><CategoryIcon style={{ color: "#00ff00" }} /></ListItemIcon>
                 <ListItemText><Link to="/Products">Products</Link></ListItemText>
               </ListItem>
 
               <ListItem button onClick={closeMobileMenu}>
-                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemIcon><PhoneInTalkIcon style={{ color: "#00ff00" }} /></ListItemIcon>
                 <ListItemText><Link to="/Talk">Talk with me</Link></ListItemText>
               </ListItem>
 
+              <ListItem button onClick={closeMobileMenu}>
+                <ListItemIcon><SettingsSuggestIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                <ListItemText><Link to="/Services">Services</Link></ListItemText>
+              </ListItem>
+              
               <ListItem button onClick={closeMobileMenu}>
                 <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
                 <ListItemText><Link to="/UserMessage">UserMessage</Link></ListItemText>
               </ListItem>
 
-              <ListItem button onClick={closeMobileMenu}>
-                <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
-                <ListItemText><Link to="/Services">Services</Link></ListItemText>
-              </ListItem>
             </List>
           </div>
         </Drawer>

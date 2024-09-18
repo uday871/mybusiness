@@ -65,7 +65,7 @@ function UserMessage() {
                   <textarea
                     value={replyMessage}
                     onChange={handleReplyChange}
-                    placeholder="Write your reply here..."
+                    placeholder=" reply.."
                     className='textarr'
                   />
                   <button onClick={handleReplySubmit} className='send-reply-btn'>
