@@ -99,7 +99,57 @@ app.post('/api/reply', async (req, res) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+const userDataSchema = new mongoose.Schema({
+  name: String,
+  phone: String,
+  email: String,
+  message: String
+});
+
+const UserData = mongoose.model('UserData', userDataSchema);
+
+// POST route to handle form submission
+app.post('/api/userdata', async (req, res) => {
+  const { name, phone, email, message } = req.body;
+
+  try {
+    const newMessage = new UserData({ name, phone, email, message });
+    await newMessage.save();
+    res.status(201).send('Message saved successfully');
+  } catch (error) {
+    res.status(500).send('Error saving message');
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+
+
+
+
+
+
