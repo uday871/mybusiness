@@ -11,7 +11,10 @@ import maintainance from './images/maintainance.png'
 import website from './images/remove.png'
 import { Link } from 'react-router-dom';
 
+import website1 from './images/mrbackimg.jpg';
+
 import './Home.css'
+import './Services.css'
 
 
 
@@ -46,6 +49,9 @@ const Services = () => {
   return (
     <>
     <div className="servicecontainer">
+      <div className="servicesvideos">
+        <img src={website1} alt="" className='servicesimage'/>
+      </div>
 
     <div className="services-section" style={{justifyContent:'center',textAlign:'center'}}>
       <h2>Our Services</h2>

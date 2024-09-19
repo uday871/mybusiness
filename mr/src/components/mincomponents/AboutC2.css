@@ -96,12 +96,13 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1168px) {
     .contact-wrapperAboutC2-contact-wrapper {
       flex-direction: column;
       padding: 10px;
       margin: 10px;
-      max-width: 380px;
+      width: auto;
+      max-width: 3800px;
     }
   
     .info-sectionAboutC2-info-section {

@@ -16,8 +16,8 @@ const ContactC1 = () => {
             <h2 className="overlay-text">Contact US</h2>
           </div>
         </div>
+
         <AboutC2/>
-        <br />
         <br />
         <br />
         <Footer/>

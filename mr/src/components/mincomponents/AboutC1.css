@@ -86,12 +86,25 @@
   margin-left: 150px;
 }
 
+.components {
+  margin-left: 40px;
+}
+
+.footersection {
+  margin-top: 70px;
+  margin-left: 70px;
+}
 
 
-
-
-
-
+@media (max-width: 720px) {
+  .components {
+    margin-left: 0;
+  }
+  .footersection {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
 
 
 
@@ -129,6 +142,7 @@
 
   .colored-letter {
     font-size: 2rem;
+    letter-spacing: 0;
   }
 
   .MR {

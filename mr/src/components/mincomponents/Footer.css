@@ -2,12 +2,13 @@
   color: #fff;
   padding: 60px 20px;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(145deg, #0d324d, #0d324d);
+  /* background: linear-gradient(145deg, #0d324d, #0d324d); */
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
+  background-color: black;
 }
 
 .footer-content {

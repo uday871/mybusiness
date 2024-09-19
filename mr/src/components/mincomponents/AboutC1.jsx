@@ -3,6 +3,7 @@ import './AboutC1.css';
 import website from '../images/business b1.jpeg';
 import mystudio from '../images/mrstudio.mp4';
 import AboutC2 from './AboutC2';
+import FooterAnimation from './FooterAnimation';
 
 const colors = ['#FF3CAC', '#784BA0', '#2B86C5', '#F8FF00', '#EE82EE', '#00FFFF', '#FF4500', '#FF1493'];
 
@@ -67,8 +68,12 @@ const AboutC1 = () => {
 
         <h1 className='sub-title'> <span style={{ fontFamily: 'Twentieth Century' }}>MR STUDIO</span> <span> </span></h1>
       </div>
-      <AboutC2/>
+
+      <div className="footersection">
+        <FooterAnimation/>
+      </div>
     </div>
+    <AboutC2/>
     </>
   );
 };

@@ -7,10 +7,12 @@ const AboutC2 = () => {
     <div className="contact-wrapperAboutC2-contact-wrapper">
       <div className="info-sectionAboutC2-info-section">
         <h2 className='titleAboutC2-title'>WELCOME TO <span style={{borderBottom:'5px solid rgb(0,134,86)'}}>MR STUDI</span>O</h2>
+
         <p className="intro-textAboutC2-intro-text">
             Feel free to connect with us for any of your needs regarding our services.
             Software services encompass a broad range of activities that provide support and solutions for software applications and systems. These services can be tailored to meet the unique needs of businesses, enhancing efficiency, productivity, and customer satisfaction. From development to maintenance, software services play a crucial role in the digital landscape.
         </p>
+        
         <img src={website} alt="" className='AboutC2image'/>
       </div>
 

@@ -23,6 +23,7 @@ import Talk from './components/Talk';
 import UserMessage from './components/UserMessage';
 import AboutC1 from './components/mincomponents/AboutC1';
 import ContactC1 from './components/mincomponents/ContactC1';
+import FooterAnimation from './components/mincomponents/FooterAnimation';
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -106,6 +107,7 @@ const App = () => {
         <Route path="/Products" element={<Products />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Talk" element={<Talk />} />
+        <Route path="/FooterAnimation" element={<FooterAnimation />} />
         <Route path="/AboutC1" element={<AboutC1 />} />
         <Route path="/ContactC1" element={<ContactC1/>} />
         <Route path="/UserMessage" element={<UserMessage />} />
