@@ -21,6 +21,8 @@ import AwesomeRainbowCursor from './components/AwesomeRainbowCursor';
 import bs from './components/images/bussinesslogo.png';
 import Talk from './components/Talk';
 import UserMessage from './components/UserMessage';
+import AboutC1 from './components/mincomponents/AboutC1';
+import ContactC1 from './components/mincomponents/ContactC1';
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,10 +49,10 @@ const App = () => {
 
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li><Link to="/AboutC1">About</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/products">Products</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
+          <li><Link to="/ContactC1">Contact Us</Link></li>
           <li className="cta"><Link to="/Talk" className="talk-btn">Let's Talk</Link></li>
         </ul>
 
@@ -69,12 +71,12 @@ const App = () => {
               </ListItem>
               <ListItem button onClick={closeMobileMenu}>
                 <ListItemIcon><InfoIcon style={{ color: "#00ff00" }} /></ListItemIcon>
-                <ListItemText><Link to="/about">About</Link></ListItemText>
+                <ListItemText><Link to="/AboutC1">About</Link></ListItemText>
               </ListItem>
 
               <ListItem button onClick={closeMobileMenu}>
                 <ListItemIcon><ChatIcon style={{ color: "#00ff00" }} /></ListItemIcon>
-                <ListItemText><Link to="/contact">Contact</Link></ListItemText>
+                <ListItemText><Link to="/ContactC1">Contact</Link></ListItemText>
               </ListItem>
 
               <ListItem button onClick={closeMobileMenu}>
@@ -109,6 +111,8 @@ const App = () => {
         <Route path="/Products" element={<Products />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Talk" element={<Talk />} />
+        <Route path="/AboutC1" element={<AboutC1 />} />
+        <Route path="/ContactC1" element={<ContactC1/>} />
         <Route path="/UserMessage" element={<UserMessage />} />
       </Routes>
       {/* <AwesomeRainbowCursor />  */}

@@ -1,0 +1,82 @@
+.ContactC1 {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.contactC1Imagescontainer {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: blur(2px);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    background: radial-gradient(circle, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.7));
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    width: auto; /* Let the text take its natural width */
+}
+
+.overlay-text {
+    font-size: 50px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-shadow: 4px 4px 12px rgba(0, 255, 255, 0.6), 2px 2px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    font-weight: bold;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 4px 4px 12px rgba(0, 255, 255, 0.8), 2px 2px 6px rgba(0, 0, 0, 1);
+    }
+    to {
+        text-shadow: 4px 4px 24px rgba(0, 255, 255, 1), 2px 2px 12px rgba(0, 0, 0, 0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 24px;
+        padding: 1px;
+        padding-left: 0;
+    }
+
+    .contactC1Imagescontainer {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .contact-image {
+        width: 100%;
+        height: auto;
+        filter: blur(0);
+    }
+
+    .overlay {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        width: 100%;
+    }
+}

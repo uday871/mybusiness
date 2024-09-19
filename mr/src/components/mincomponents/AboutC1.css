@@ -1,0 +1,182 @@
+.about-sectionn {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-size: cover;
+  margin-top: 100px;
+}
+
+.colored-letter {
+  margin: 0 5px;
+  font-size: 6rem;
+}
+
+.glow-effect {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  animation: pulse 2s infinite;
+}
+
+.content-wrapper {
+  position: relative;
+  text-align: left;
+  color: white;
+  width: 90%;
+  max-width: 1620px;
+  margin: 0 auto;
+  margin-left: 200px;
+}
+
+.main-title {
+  font-size: 7rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 20px rgba(0, 168, 107, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
+  }
+}
+
+.media-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+  margin-left: -150px;
+  /* justify-content: center;  */
+  flex-wrap: wrap;
+}
+
+.media-image {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-left: -450px;
+}
+
+.media-video {
+  width: 300px;
+  margin-left: -400px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.sub-titles {
+  font-size: 8rem;
+}
+
+.sub-title {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(0,168,107);
+  font-size: 9rem;
+  margin-left: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 720px) {
+  .about-sectionn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 70px;
+  }
+
+  .content-wrapper {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .colored-letter {
+    font-size: 2rem;
+  }
+
+  .MR {
+    border-bottom: 5px solid rgb(0,168,107);
+  }
+
+  .main-title {
+    font-size: 3.5rem;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .sub-titles {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  .sub-title {
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .media-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
+  }
+
+  .media-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .media-video {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+}
