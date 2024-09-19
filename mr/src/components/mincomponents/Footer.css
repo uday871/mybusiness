@@ -116,9 +116,11 @@
   margin-top: 10px;
   font-size: 14px;
   color: #fff;
-  background: linear-gradient(90deg, #f093fb, #f5576c);
+  /* background: linear-gradient(90deg, #f093fb, #f5576c); */
+  background-color: green;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 16px;
 }
 
 .credits .heart {

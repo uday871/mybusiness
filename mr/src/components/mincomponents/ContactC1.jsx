@@ -1,7 +1,9 @@
 import React from 'react';
 import './ContactC1.css'; 
-import website from '../images/business b1.jpeg';
+import website from '../images/mrbackimg.jpg';
+
 import AboutC2 from './AboutC2';
+import Footer from './Footer';
 
 const ContactC1 = () => {
   return (
@@ -14,8 +16,12 @@ const ContactC1 = () => {
             <h2 className="overlay-text">Contact US</h2>
           </div>
         </div>
-      </div>
         <AboutC2/>
+        <br />
+        <br />
+        <br />
+        <Footer/>
+      </div>
     </>
   );
 }

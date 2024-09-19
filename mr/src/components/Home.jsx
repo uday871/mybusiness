@@ -13,7 +13,7 @@ import AppSettingsAltIcon from '@mui/icons-material/AppSettingsAlt';
 import BuildCircleIcon from '@mui/icons-material/BuildCircle';
 
 import GalleryView from './GalleryView';
-import Footer from './Footer';
+import Footer from '../components/mincomponents/Footer';
 
 import { useState,useEffect } from 'react';
 import AwesomeRainbowCursor from './AwesomeRainbowCursor';

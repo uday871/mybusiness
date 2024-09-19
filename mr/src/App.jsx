@@ -51,7 +51,6 @@ const App = () => {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/AboutC1">About</Link></li>
           <li><Link to="/services">Services</Link></li>
-          <li><Link to="/products">Products</Link></li>
           <li><Link to="/ContactC1">Contact Us</Link></li>
           <li className="cta"><Link to="/Talk" className="talk-btn">Let's Talk</Link></li>
         </ul>
@@ -79,10 +78,6 @@ const App = () => {
                 <ListItemText><Link to="/ContactC1">Contact</Link></ListItemText>
               </ListItem>
 
-              <ListItem button onClick={closeMobileMenu}>
-                <ListItemIcon><CategoryIcon style={{ color: "#00ff00" }} /></ListItemIcon>
-                <ListItemText><Link to="/Products">Products</Link></ListItemText>
-              </ListItem>
 
               <ListItem button onClick={closeMobileMenu}>
                 <ListItemIcon><PhoneInTalkIcon style={{ color: "#00ff00" }} /></ListItemIcon>

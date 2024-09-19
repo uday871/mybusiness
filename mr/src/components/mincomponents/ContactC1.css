@@ -2,20 +2,20 @@
     position: relative;
     width: 100%;
     padding: 20px;
+    width: 1535px;
 }
 
 .contactC1Imagescontainer {
     position: relative;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1520px;
     margin: 0 auto;
 }
 
 .contact-image {
     width: 100%;
-    height: auto;
+    height: 700px;
     display: block;
-    filter: blur(2px);
 }
 
 .overlay {
@@ -25,12 +25,10 @@
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     background: radial-gradient(circle, rgba(30, 30, 30, 0.9), rgba(0, 0, 0, 0.7));
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 255, 255, 0.2);
-    backdrop-filter: blur(6px);
-    width: auto; /* Let the text take its natural width */
+    width: auto;
 }
 
 .overlay-text {
@@ -41,7 +39,7 @@
     text-shadow: 4px 4px 12px rgba(0, 255, 255, 0.6), 2px 2px 6px rgba(0, 0, 0, 0.8);
     letter-spacing: 2px;
     font-weight: bold;
-    animation: glow 1.5s ease-in-out infinite alternate;
+    /* animation: glow 1.5s ease-in-out infinite alternate; */
 }
 
 @keyframes glow {
@@ -54,6 +52,13 @@
 }
 
 @media (max-width: 768px) {
+    .ContactC1 {
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        width: auto;
+    }
     .overlay-text {
         font-size: 24px;
         padding: 1px;
@@ -68,7 +73,7 @@
 
     .contact-image {
         width: 100%;
-        height: auto;
+        height: 300px;
         filter: blur(0);
     }
 
