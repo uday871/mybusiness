@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './AboutC2.css'; 
 import website from '../images/business b1.jpeg';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AboutC2 = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +11,6 @@ const AboutC2 = () => {
     email: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +21,7 @@ const AboutC2 = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://mytrend.onrender.com/api/userdata', {
+      const response = await fetch('http://localhost:5000/api/userdata', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,8 +30,15 @@ const AboutC2 = () => {
       });
 
       if (response.ok) {
-        setSubmitted(true);
-        alert("Your message has been submitted!");
+        toast.success('Your message has been submitted successfully!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
         setFormData({
           name: '',
           phone: '',
@@ -38,16 +46,45 @@ const AboutC2 = () => {
           message: ''
         });
       } else {
-        alert('Failed to submit the message.');
+        const errorData = await response.json();
+        toast.error(`Failed to submit the message: ${errorData.message}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       }
     } catch (error) {
       console.error('Error submitting the form:', error.message);
-      alert('Error submitting the message.');
+      toast.error('Error submitting the message. Please try again.', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
   return (
     <div className="contact-wrapperAboutC2-contact-wrapper">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      
       <div className="info-sectionAboutC2-info-section">
         <h2 className='titleAboutC2-title'>WELCOME TO <span style={{borderBottom:'5px solid rgb(0,134,86)'}}>MR STUDIO</span></h2>
 
