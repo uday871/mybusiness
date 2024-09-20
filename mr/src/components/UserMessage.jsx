@@ -34,7 +34,7 @@ function UserMessage() {
 
     if (currentMessage) {
       try {
-        await axios.post('http://localhost:5000/api/reply', {
+        await axios.post('https://mytrend.onrender.com/api/reply', {
           email: currentMessage.email,
           message: replyMessage,
         });

@@ -21,7 +21,7 @@ const AboutC2 = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:5000/api/userdata', {
+      const response = await fetch('https://mytrend.onrender.com/api/userdata', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
