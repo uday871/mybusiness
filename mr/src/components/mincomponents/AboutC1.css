@@ -58,6 +58,8 @@
   margin-left: -150px;
   /* justify-content: center;  */
   flex-wrap: wrap;
+  /* background-color: red; */
+  padding: 10px;
 }
 
 .media-image {
