@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './GalleryView.css';
-import homeimg from './images/myhome.jpg'
+import homeimg from './images/myhome.webp'
 
 const GalleryView = () => {
   return (

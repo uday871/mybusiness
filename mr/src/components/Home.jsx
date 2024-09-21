@@ -1,11 +1,11 @@
 import React from 'react';
 import './Home.css';
-import imm from './images/Design.png';
-import homeimg from './images/myhome.jpg';
+import imm from './images/Design.webp';
+import homeimg from './images/myhome.webp';
 
 import mobileapp from './images/mobileapp.webp'
-import maintainance from './images/maintainance.png'
-import website from './images/remove.png'
+import maintainance from './images/maintainance.webp'
+import website from './images/side.webp'
 import { Link } from 'react-router-dom';
 
 import WebIcon from '@mui/icons-material/Web';
@@ -16,6 +16,7 @@ import GalleryView from './GalleryView';
 import Footer from '../components/mincomponents/Footer';
 
 import { useState,useEffect } from 'react';
+
 import AwesomeRainbowCursor from './AwesomeRainbowCursor';
 
 
@@ -27,21 +28,22 @@ const [experts, setExperts] = useState(0);
 const [isVisible, setIsVisible] = useState(false);
   const services = [
   {
-    id:1,
+    id:'/ContactC1',
     title: 'Website Development',
     icon:  <WebIcon style={{ fontSize: 70 }} />,
     image: website,
     active: true,
   },
   {
-    id:2,
+    id:'/ContactC1',
     title: 'App Development',
     icon: <AppSettingsAltIcon style={{ fontSize: 70 }} />,
     image: mobileapp,
     active: true,
   },
+
   {
-    id:3,
+    id:'/ContactC1',
     title: 'Maintainance',
     icon:  <BuildCircleIcon style={{ fontSize: 70 }} />,
     image: maintainance,
@@ -125,7 +127,7 @@ useEffect(() => {
           <div className="graphic-container">
             <div className="graphic">
               <img src={imm} alt="Graphic" className="graphic-img" />
-              {/* <AwesomeRainbowCursor/> */}
+              <AwesomeRainbowCursor/>
             </div>
           </div>
           
@@ -148,7 +150,9 @@ useEffect(() => {
     <p>
       At <strong>MR TEAM</strong>, we understand that your online presence is more than just code and graphics; it's the digital heartbeat of your brand. That's why we specialize in creating custom web solutions tailored to your unique needs.
     </p>
-    <a href="/read-more" className="read-more">Read More →</a>
+
+    <Link to="/ContactC1" className='read-more'>Read More </Link>
+
   </div>
 </div>
 </section>
@@ -181,7 +185,7 @@ useEffect(() => {
       <div className="stat-item">
         <span className="filled-number">{clients}</span>
         <p className="stat-label">CLIENTS</p>
-        <a href="#all-services" className="services-link">All Services</a>
+        <Link to="/services" className='services-link'>All Services </Link>
       </div>
       <div className="stat-item">
         <span className="outline-number">{experts}</span>
@@ -206,7 +210,7 @@ useEffect(() => {
 
   <div className="service-cards-container">
   {services.map((service, index) => (
-    <Link key={index} to={`/cart/${service.id}`} className={`service-card ${service.active ? 'active' : ''}`}>
+    <Link key={index} to={`${service.id}`} className={`service-card ${service.active ? 'active' : ''}`}>
       <div className="icon-container">
         {service.icon}
       </div>

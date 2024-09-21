@@ -11,7 +11,7 @@ function UserMessage() {
 
   useEffect(() => {
     const fetchMessages = async () => {
-      setIsLoading(true); // Show loading indicator
+      setIsLoading(true);
       try {
         const response = await axios.get('https://mytrend.onrender.com/api/messages');
         setMessages(response.data);

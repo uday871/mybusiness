@@ -7,11 +7,12 @@ import AppSettingsAltIcon from '@mui/icons-material/AppSettingsAlt';
 import BuildCircleIcon from '@mui/icons-material/BuildCircle';
 
 import mobileapp from './images/mobileapp.webp'
-import maintainance from './images/maintainance.png'
-import website from './images/remove.png'
+import maintainance from './images/maintainance.webp'
+import website from './images/side.webp'
+
 import { Link } from 'react-router-dom';
 
-import website1 from './images/mrbackimg.jpg';
+import website1 from './images/mrbr.webp';
 
 import './Home.css'
 import './Services.css'

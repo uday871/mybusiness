@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './AboutC1.css';
-import website from '../images/business b1.jpeg';
+
+
+import website from '../images/business b1.webp';
+
 import mystudio from '../images/mrstudio.mp4';
+
 import AboutC2 from './AboutC2';
 import FooterAnimation from './FooterAnimation';
 

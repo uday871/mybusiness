@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import talk from './images/talk.webp';
 import './Talk.css';
 
@@ -8,34 +10,29 @@ function Talk() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError(null);
-    setSuccess(null);
     setIsLoading(true);
 
     try {
       const response = await axios.post('https://mytrend.onrender.com/api/messages', { name, email, message });
       if (response.data.success) {
-        setSuccess('Message sent successfully!');
+        toast.success('Message sent successfully!');
         setName('');
         setEmail('');
         setMessage('');
       } else {
-        setError('Failed to send message. Please try again.');
+        toast.error('Failed to send message. Please try again.');
       }
     } catch (error) {
-      setError('Failed to send message. Please try again.');
+      toast.error('Failed to send message. Please try again.');
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Optimizing the input handlers with useCallback to avoid unnecessary re-renders
   const handleNameChange = useCallback((e) => setName(e.target.value), []);
   const handleEmailChange = useCallback((e) => setEmail(e.target.value), []);
   const handleMessageChange = useCallback((e) => setMessage(e.target.value), []);
@@ -43,19 +40,22 @@ function Talk() {
   return (
     <div className="contact-page">
       <Helmet>
-        <title>Contact Us - Talk with Us</title>
+        <title>Contact Us</title>
         <meta name="description" content="Send us a message to get in touch or ask any questions. We'd love to hear from you!" />
         <meta name="keywords" content="contact, message, support, talk, help, send message" />
       </Helmet>
-      
-      <header>
-        <h1>Contact Us</h1>
-      </header>
+
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
 
       <main>
         <section className="contact-left">
+          <img src={talk} alt="Talk to Us - Contact" className="banner-image" />
+        </section>
+
+        <section className="contact-right">
           <div className="contact-form">
-            <h2>Get in Touch</h2>
+            <h1>Message Me </h1>
+            <h2>Join Us</h2>
             <form onSubmit={handleSubmit}>
               <label htmlFor="name">Name:</label>
               <input
@@ -95,15 +95,8 @@ function Talk() {
               <button type="submit" className="snedtoadmin" disabled={isLoading}>
                 {isLoading ? 'Sending...' : 'Send'}
               </button>
-
-              {success && <p className="success-message">{success}</p>}
-              {error && <p className="error-message">{error}</p>}
             </form>
           </div>
-        </section>
-
-        <section className="contact-right">
-          <img src={talk} alt="Talk to Us - Contact" className="banner-image" />
         </section>
       </main>
     </div>

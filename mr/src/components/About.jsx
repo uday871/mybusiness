@@ -1,5 +1,5 @@
 import React from 'react'
-import website from './images/remove.png'
+import website from './images/slide.webp'
 import './About.css'
 
 const About = () => {

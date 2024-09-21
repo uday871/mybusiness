@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './AboutC2.css'; 
-import website from '../images/business b1.jpeg';
+import website from '../images/business b1.webp';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
