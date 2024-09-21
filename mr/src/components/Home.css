@@ -115,7 +115,7 @@ body {
   max-height: 70vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
   .maincontainer {
     overflow: hidden;
     margin-top: 50px;
@@ -647,6 +647,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
+  /* margin-top: -500px;
+  background-color: black; */
 }
 
 .services-section h2::after {
