@@ -47,7 +47,7 @@ const App = () => {
       </Helmet>
 
       <Router>
-        <ScrollToTop /> {/* Add ScrollToTop inside the Router */}
+        <ScrollToTop />
         <nav className="navbar">
           <div className="logocontainer">
             <div className="logo">
