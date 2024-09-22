@@ -109,12 +109,13 @@
 
 @media (max-width: 500px) {
     .message-page {
-        width: 100%;
+        width: 380px;
         max-width: 1530px;
         margin: 0 auto;
-        margin-top: -300px;
+        margin-top: 70px;
         padding: 30px;
     }
+
     .textarr {
         height: 80px;
         padding: 15px;
