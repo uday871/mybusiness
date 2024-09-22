@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './AboutC1.css';
+
+
 import website from '../images/business b1.webp';
+
 import mystudio from '../images/mrstudio.mp4';
+
 import AboutC2 from './AboutC2';
 import FooterAnimation from './FooterAnimation';
 
@@ -42,39 +46,38 @@ const AboutC1 = () => {
 
   return (
     <>
-      <div className="about-sectionn">
-        <div className="content-wrapper">
-          <h1 className="main-title">
-            <span className='MR'> MR </span> {coloredLetters}
-          </h1>
+    <div className="about-sectionn">
+      <div className="content-wrapper">
+        <h1 className="main-title" style={{fontFamily: 'Twentieth Century', fontWeight: 'bolder' }}>
+          <span className='MR'> MR </span> {coloredLetters}
+        </h1>
 
-          <h2 className='sub-titles'> at a </h2>
+        <div className="media-container">
+          <h1 className='sub-titles'> at a </h1>
+          <img
+            src={website}
+            alt="People collaborating at a desk"
+            className="media-image"
+          />
 
-          <div className="media-container">
-            <img
-              src={website}
-              alt="People collaborating at a desk"
-              className="media-image"
-            />
-
-            <video
-              src={mystudio}
-              alt="Group discussion"
-              className="media-video"
-              autoPlay
-              muted
-              loop
-            />
-          </div>
-
-          <h1 className='sub-title'><span>MR STUDIO</span></h1>
+          <video
+            src={mystudio}
+            alt="Group discussion"
+            className="media-video"
+            autoPlay
+            muted
+            loop
+          />
         </div>
 
-        <div className="footersection">
-          <FooterAnimation/>
-        </div>
+        <h1 className='sub-title'> <span style={{ fontFamily: 'Twentieth Century' }}>MR STUDIO</span> <span> </span></h1>
       </div>
-      <AboutC2/>
+
+      <div className="footersection">
+        <FooterAnimation/>
+      </div>
+    </div>
+    <AboutC2/>
     </>
   );
 };
