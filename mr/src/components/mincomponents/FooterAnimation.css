@@ -8,7 +8,7 @@
   box-sizing: border-box;
   overflow-x: auto;
   overflow-y: hidden;
-  width: auto;
+  width: 100%;
 }
 
 .footer-animation__item {
@@ -34,7 +34,7 @@
   .footer-animation__container {
     justify-content: flex-start;
     padding: 10px;
-    width: 380px;
+    width: 330px;
   }
 
   .footer-animation__container::-webkit-scrollbar {
