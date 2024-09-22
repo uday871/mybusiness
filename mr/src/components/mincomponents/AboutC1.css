@@ -131,8 +131,10 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     margin-top: 70px;
+    width: 380px;
+    max-width: 1000px;
   }
 
   .content-wrapper {
@@ -143,7 +145,7 @@
   }
 
   .colored-letter {
-    font-size: 2rem;
+    font-size: 1.7rem;
     letter-spacing: 0;
   }
 
