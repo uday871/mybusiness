@@ -13,6 +13,7 @@ import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 
 import bs from './components/images/bussinesslogo.webp';
+import LoadingPage from './components/mincomponents/LoadingPage';
 
 const Home = lazy(() => import('./components/Home'));
 const AboutC1 = lazy(() => import('./components/mincomponents/AboutC1'));
@@ -61,7 +62,7 @@ const App = () => {
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/AboutC1">About</Link></li>
-            <li><Link to="/VideoCapture">Hidden</Link></li>
+            {/* <li><Link to="/LoadingPage">Hidden</Link></li> */}
             <li><Link to="/Services">Services</Link></li>
             <li><Link to="/ContactC1">Contact Us</Link></li>
             <li className="cta"><Link to="/Talk" className="talk-btn">Let's Talk</Link></li>
@@ -87,23 +88,25 @@ const App = () => {
                   <ListItemText primary={<Link to="/ContactC1">Contact</Link>} />
                 </ListItem>
                 <ListItem button onClick={closeMobileMenu}>
-                  <ListItemIcon><PhoneInTalkIcon style={{ color: "#00ff00" }} /></ListItemIcon>
-                  <ListItemText primary={<Link to="/Talk">Talk with me</Link>} />
-                </ListItem>
-                <ListItem button onClick={closeMobileMenu}>
                   <ListItemIcon><SettingsSuggestIcon style={{ color: "#00ff00" }} /></ListItemIcon>
                   <ListItemText primary={<Link to="/Services">Services</Link>} />
                 </ListItem>
+
                 <ListItem button onClick={closeMobileMenu}>
+                  <ListItemIcon><PhoneInTalkIcon style={{ color: "#00ff00" }} /></ListItemIcon>
+                  <ListItemText primary={<Link to="/Talk">Talk with me</Link>} />
+                </ListItem>
+                
+                {/* <ListItem button onClick={closeMobileMenu}>
                   <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
                   <ListItemText primary={<Link to="/UserMessage">UserMessage</Link>} />
-                </ListItem>
+                </ListItem> */}
               </List>
             </div>
           </Drawer>
         </nav>
 
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div><LoadingPage/></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/AboutC1" element={<AboutC1 />} />
@@ -111,6 +114,7 @@ const App = () => {
             <Route path="/Services" element={<Services />} />
             <Route path="/ContactC1" element={<ContactC1 />} />
             <Route path="/Talk" element={<Talk />} />
+            <Route path="/LoadingPage" element={<LoadingPage />} />
             <Route path="/FooterAnimation" element={<FooterAnimation />} />
             <Route path="/UserMessage" element={<UserMessage />} />
           </Routes>

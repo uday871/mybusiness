@@ -118,7 +118,7 @@ const AboutC2 = () => {
               type="tel"
               id="phone"
               name="phone"
-              placeholder="Your Phone Number"
+              placeholder="WhatsApp Number"
               className="AboutC2-input"
               value={formData.phone}
               onChange={handleChange}

@@ -25,21 +25,21 @@ const Services = () => {
 
   const services = [
     {
-      id:1,
+      id: '/ContactC1',
       title: 'Website Development',
       icon:  <WebIcon style={{ fontSize: 70 }} />,
       image: website,
       active: true,
     },
     {
-      id:2,
+      id:'/ContactC1',
       title: 'App Development',
       icon: <AppSettingsAltIcon style={{ fontSize: 70 }} />,
       image: mobileapp,
       active: true,
     },
     {
-      id:3,
+      id:'/ContactC1',
       title: 'Maintainance',
       icon:  <BuildCircleIcon style={{ fontSize: 70 }} />,
       image: maintainance,
@@ -64,7 +64,7 @@ const Services = () => {
 
 <div className="service-cards-container">
 {services.map((service, index) => (
-  <Link key={index} to={`/cart/${service.id}`} className={`service-card ${service.active ? 'active' : ''}`}>
+    <Link key={index} to={`${service.id}`} className={`service-card ${service.active ? 'active' : ''}`}>
     <div className="icon-container">
       {service.icon}
     </div>

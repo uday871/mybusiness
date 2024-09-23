@@ -1,0 +1,147 @@
+/* LoadingPage.css */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 1000px;
+    background: radial-gradient(circle, #1a1a1a, #000); /* Adds radial background for depth */
+    animation: breathing 6s ease-in-out infinite;
+}
+
+.circle-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px; /* For 3D depth */
+}
+
+/* Arc Base Style */
+.arc {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    animation: rotate 4s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 50px rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+
+/* Yellow Arc with Trail and Color Shifting */
+.arc-yellow {
+    width: 240px;
+    height: 240px;
+    border-top: 5px solid transparent;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 1), rgba(255, 165, 0, 0.5));
+    animation: rotate 6s linear infinite, color-shift 8s ease-in-out infinite alternate;
+    transform: rotateX(20deg); /* Slight 3D tilt */
+}
+
+/* Cyan Arc with Trail and Opposite Rotation */
+.arc-cyan {
+    width: 200px;
+    height: 200px;
+    border-right: 5px solid transparent;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1), rgba(0, 155, 255, 0.5));
+    animation: rotate-reverse 5s linear infinite, color-shift 10s ease-in-out infinite alternate;
+    transform: rotateY(30deg);
+}
+
+/* Red Arc with Trail */
+.arc-red {
+    width: 160px;
+    height: 160px;
+    border-left: 5px solid transparent;
+    background: linear-gradient(90deg, rgba(255, 0, 64, 1), rgba(255, 64, 128, 0.5));
+    animation: rotate 3.5s linear infinite, color-shift 6s ease-in-out infinite alternate;
+    transform: rotateX(-30deg);
+}
+
+/* Neon glow and Center Pulse */
+.center-glow {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 100px rgba(255, 255, 255, 0.3);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Central Circle with Bounce and Pulse */
+.center-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.5);
+    animation: pulse-bounce 2s ease-in-out infinite alternate;
+}
+
+/* Animations */
+/* Rotating forward */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Rotating in reverse for more complexity */
+@keyframes rotate-reverse {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Color shift animation */
+@keyframes color-shift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Pulsing neon glow */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 100px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 60px rgba(255, 255, 255, 0.8), 0 0 150px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Breathing effect for the entire loader */
+@keyframes breathing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Bounce effect for the center circle */
+@keyframes pulse-bounce {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+}
