@@ -97,10 +97,6 @@ const App = () => {
                   <ListItemText primary={<Link to="/Talk">Talk with me</Link>} />
                 </ListItem>
                 
-                {/* <ListItem button onClick={closeMobileMenu}>
-                  <ListItemIcon><ContactsIcon style={{ color: "#00ff00" }} /></ListItemIcon>
-                  <ListItemText primary={<Link to="/UserMessage">UserMessage</Link>} />
-                </ListItem> */}
               </List>
             </div>
           </Drawer>

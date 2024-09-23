@@ -13,7 +13,7 @@
     position: relative;
     width: 250px;
     height: 250px;
-    perspective: 1000px; /* For 3D depth */
+    perspective: 1000px; 
 }
 
 /* Arc Base Style */
