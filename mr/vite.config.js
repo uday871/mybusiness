@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/mybusiness/mr',
+  base: '/mybusiness/mr/',
   plugins: [
     react(),
     VitePWA({
