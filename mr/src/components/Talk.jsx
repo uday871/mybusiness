@@ -15,23 +15,20 @@ function Talk() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
-
+    toast.success('Message sent successfully!'); 
+  
     try {
-      const response = await axios.post('https://mytrend.onrender.com/api/messages', { name, email, message });
-      if (response.data.success) {
-        toast.success('Message sent successfully!');
-        setName('');
-        setEmail('');
-        setMessage('');
-      } else {
-        toast.error('Failed to send message. Please try again.');
-      }
+      await axios.post('https://mytrend.onrender.com/api/messages', { name, email, message });
+      setName('');
+      setEmail('');
+      setMessage('');
     } catch (error) {
       toast.error('Failed to send message. Please try again.');
     } finally {
       setIsLoading(false);
     }
   };
+  
 
   const handleNameChange = useCallback((e) => setName(e.target.value), []);
   const handleEmailChange = useCallback((e) => setEmail(e.target.value), []);

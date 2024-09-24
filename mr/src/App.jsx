@@ -38,7 +38,7 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>Business App - Home</title>
+        <title>Business</title>
         <meta
           name="description"
           content="Welcome to our business platform. Learn more about our services, products, and how to contact us."
@@ -55,7 +55,7 @@ const App = () => {
               <img src={bs} alt="Business Logo" className="logoimage" loading="lazy" />
             </div>
             <div className="logo" style={{ marginLeft: '0' }}>
-              Business
+              FlexFlow
             </div>
           </div>
 
