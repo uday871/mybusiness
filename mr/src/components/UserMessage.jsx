@@ -8,7 +8,6 @@ function UserMessage() {
   const [replyMessage, setReplyMessage] = useState('');
   const [currentMessageId, setCurrentMessageId] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [isReplyLoading, setIsReplyLoading] = useState(false);
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -34,28 +33,18 @@ function UserMessage() {
     const currentMessage = messages.find((msg) => msg._id === currentMessageId);
 
     if (currentMessage) {
-      setIsReplyLoading(true); 
       try {
         await axios.post('https://mytrend.onrender.com/api/reply', {
           email: currentMessage.email,
-          replyMessage: replyMessage,
-          originalMessage: currentMessage.message,
+          message: replyMessage,
         });
         alert('Reply sent successfully!');
         setReplyMessage('');
         setCurrentMessageId(null);
       } catch (error) {
-        console.error('Error sending reply:', error.response ? error.response.data : error.message);
-        alert('Failed to send reply. Please try again.');
-      } finally {
-        setIsReplyLoading(false); // End loading state
+        alert('Failed to send reply.');
       }
     }
-  };
-
-  const handleCancelReply = () => {
-    setReplyMessage('');
-    setCurrentMessageId(null);
   };
 
   return (
@@ -87,18 +76,9 @@ function UserMessage() {
                     placeholder="Your reply..."
                     className="textarr"
                   />
-                  {isReplyLoading ? (
-                    <p>Sending reply...</p>
-                  ) : (
-                    <>
-                      <button onClick={handleReplySubmit} className="send-reply-btn">
-                        Send Reply
-                      </button>
-                      <button onClick={handleCancelReply} className="cancel-reply-btn">
-                        Cancel
-                      </button>
-                    </>
-                  )}
+                  <button onClick={handleReplySubmit} className="send-reply-btn">
+                    Send Reply
+                  </button>
                 </div>
               </div>
             )}
