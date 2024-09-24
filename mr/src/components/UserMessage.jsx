@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './UserMessage.css';
 
 function UserMessage() {
@@ -33,16 +35,25 @@ function UserMessage() {
     const currentMessage = messages.find((msg) => msg._id === currentMessageId);
 
     if (currentMessage) {
+      // Optimistic UI Update: Immediately update the UI
+      const updatedMessages = messages.map((msg) =>
+        msg._id === currentMessageId
+          ? { ...msg, replySent: true } // Assuming you want to indicate that a reply is sent
+          : msg
+      );
+      setMessages(updatedMessages);
+      toast.success('Reply sent successfully!'); // Show success toast
+      setReplyMessage('');
+      setCurrentMessageId(null);
+
       try {
         await axios.post('https://mytrend.onrender.com/api/reply', {
           email: currentMessage.email,
           message: replyMessage,
         });
-        alert('Reply sent successfully!');
-        setReplyMessage('');
-        setCurrentMessageId(null);
       } catch (error) {
-        alert('Failed to send reply.');
+        toast.error('Failed to send reply.'); // Show error toast
+        // Optionally revert the optimistic update here if needed
       }
     }
   };
@@ -85,6 +96,8 @@ function UserMessage() {
           </div>
         ))}
       </div>
+
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} closeOnClick={true} pauseOnHover={true} draggable={true} />
     </div>
   );
 }
