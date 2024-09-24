@@ -62,7 +62,7 @@ const App = () => {
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/AboutC1">About</Link></li>
-            {/* <li><Link to="/LoadingPage">Hidden</Link></li> */}
+            <li><Link to="/UserMessage">Hidden</Link></li>
             <li><Link to="/Services">Services</Link></li>
             <li><Link to="/ContactC1">Contact Us</Link></li>
             <li className="cta"><Link to="/Talk" className="talk-btn">Let's Talk</Link></li>

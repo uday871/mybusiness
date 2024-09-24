@@ -8,7 +8,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
-const redis = require('redis'); 
+const redis = require('redis');
 
 dotenv.config();
 
@@ -29,8 +29,8 @@ app.use(cors(corsOptions));
 
 // Rate limiting to prevent abuse
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per windowMs
 });
 app.use('/api/', limiter);
 
@@ -100,6 +100,7 @@ app.post('/api/messages', async (req, res) => {
 
     res.status(201).json({ success: true, message: 'Message saved successfully' });
   } catch (error) {
+    console.error('Error saving message:', error);
     res.status(500).json({ success: false, message: 'Internal server error' });
   }
 });
@@ -114,6 +115,7 @@ app.get('/api/messages', cache, async (req, res) => {
 
     res.status(200).json(messages);
   } catch (error) {
+    console.error('Error fetching messages:', error);
     res.status(500).json({ message: 'Failed to fetch messages' });
   }
 });
@@ -143,13 +145,14 @@ app.post('/api/reply', async (req, res) => {
 
     res.status(200).json({ message: 'Reply sent successfully!' });
   } catch (error) {
+    console.error('Error sending reply:', error);
     res.status(500).json({ error: 'Failed to send reply' });
   }
 });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error('Server error:', err.stack);
   res.status(500).send('Something broke!');
 });
 
