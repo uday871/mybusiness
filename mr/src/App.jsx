@@ -62,7 +62,6 @@ const App = () => {
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/AboutC1">About</Link></li>
-            <li><Link to="/UserMessage">Hidden</Link></li>
             <li><Link to="/Services">Services</Link></li>
             <li><Link to="/ContactC1">Contact Us</Link></li>
             <li className="cta"><Link to="/Talk" className="talk-btn">Let's Talk</Link></li>
@@ -112,7 +111,6 @@ const App = () => {
             <Route path="/Talk" element={<Talk />} />
             <Route path="/LoadingPage" element={<LoadingPage />} />
             <Route path="/FooterAnimation" element={<FooterAnimation />} />
-            <Route path="/UserMessage" element={<UserMessage />} />
           </Routes>
         </Suspense>
       </Router>
